@@ -9,12 +9,15 @@ describe('Test-training App', () => {
     expect(actualTitle).to.eql('test training');
   });
 
-  it('Should get input element and delete', () => {
+  it('Should get input by alert', () => {
     const InputText = 'input';
     browser.url('http://localhost:3000/');
     browser.element('.input-alert').setValue(InputText);
     browser.click('.button-click');
     expect(browser.alertText()).to.eql('input');
+  });
+
+  it('Should delete input value', () => {
     browser.alertAccept();
     expect(browser.element('.input-alert').getText()).to.eql('');
   });
