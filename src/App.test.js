@@ -8,8 +8,8 @@ describe('App', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.exists()).toBe(true);
   });
-  it('has <Input />', () => {
-    const wrapper = shallow(Input);
-    expect(wrapper.exists()).not.toBe(true);
+  it('exists child component', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('Input').length).toBe(1);
   });
 });
