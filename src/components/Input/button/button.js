@@ -5,7 +5,7 @@ const Button = (props) => {
 
   return (
     <div className="App">
-      <button type="button" onClick={handleClick}>
+      <button className="button-click" type="button" onClick={handleClick}>
         Send!
       </button>
     </div>

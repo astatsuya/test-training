@@ -28,7 +28,7 @@ class Input extends React.Component {
     return (
       <form>
         Input:{' '}
-        <input type="text" value={this.state.name} onChange={this.handleChange} />
+        <input className="input-alert" type="text" value={this.state.name} onChange={this.handleChange} />
         <Button handleClick={this.handleClick} />
       </form>
     );
